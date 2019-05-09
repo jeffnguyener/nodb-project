@@ -20,7 +20,7 @@ module.exports = {
         res.status(200).send(findId[0])
     },
     createEvent: (req, res) => {
-        let id = events.[events.length - 1].id++
+        let id = events[events.length - 1].id++
         const newEvent = {
             title: req.body.title,
             id: id
@@ -28,4 +28,11 @@ module.exports = {
         events = [...events, newEvent]
         res.status(200).send(events)
     },
+    updateEvent: (req, res) => {
+        const 
+    },
+    deleteEvent: (req, res) => {
+        const {title, id} = req.params;
+        events = events.filter()
+    }
 }
