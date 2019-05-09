@@ -9,7 +9,7 @@ app.get('/api/event/:title', vc.getEventByTitle)
 app.get('/api/events/:id', vc.getEventById)
 app.post('/api/events', vc.createEvent)
 app.put('/api/events/:id', vc.updateEvent)
-// app.delete()
+app.delete('/api/events/:id', vc.deleteEvent)
 
 
 const PORT = 3555

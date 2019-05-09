@@ -49,8 +49,9 @@ module.exports = {
         res.status(200).send(events)
     },
 
-    // deleteEvent: (req, res) => {
-    //     const { title, id } = req.params;
-    //     events = events.filter()
-    // }
+    deleteEvent: (req, res) => {
+        const { id } = req.params;
+        events = events.filter((events) => events.id !== +id)
+        res.status(200).send(events)
+    }
 }
