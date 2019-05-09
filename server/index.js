@@ -6,7 +6,6 @@ app.use(express.json())
 
 app.get('/api/events', vc.getEvent)
 app.get('/api/events', vc.getEventByTitle)
-app.get('/api/events', vc.getEventById)
 app.post('/api/events', vc.createEvent)
 
 

@@ -28,9 +28,9 @@ module.exports = {
     updateEvent: (req, res) => {
         const 
     },
-    
+
     deleteEvent: (req, res) => {
-        const {title, id} = req.params;
+        const {title} = req.params;
         events = events.filter()
     }
 }
