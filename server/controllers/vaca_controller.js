@@ -3,6 +3,9 @@ let events = [
     { title: 'Alaska', id: 2 }
 ]
 
+let id = 1;
+id += events.length;
+
 module.exports = {
     getEvent: (req, res) => {
         res.status(200).send(events)
@@ -23,22 +26,26 @@ module.exports = {
     },
 
     createEvent: (req, res) => {
-        let id = events[events.length - 1].id++
-        const newEvent = {
+        let newEvent = {
             title: req.body.title,
             id: id
         }
         events = [...events, newEvent]
+        id++
         res.status(200).send(events)
     },
 
     updateEvent: (req, res) => {
-        let title = events.title
-        const updatedEvent = {
-            title: req.body.title,
-            id: id
+        const {id} = req.params
+        const {title}= req.body
+        let updatedEvent = {
+            title: title
+            
         }
-        events = [...events, updatedEvent]
+        let myEvent = events.find(element => {
+            return element.id === +id
+        })
+        myEvent.title = updatedEvent.title
         res.status(200).send(events)
     },
 

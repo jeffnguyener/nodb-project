@@ -8,7 +8,7 @@ app.get('/api/events', vc.getEvent)
 app.get('/api/event/:title', vc.getEventByTitle)
 app.get('/api/events/:id', vc.getEventById)
 app.post('/api/events', vc.createEvent)
-app.put('/api/events', vc.updateEvent)
+app.put('/api/events/:id', vc.updateEvent)
 // app.delete()
 
 
