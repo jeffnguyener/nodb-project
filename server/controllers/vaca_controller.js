@@ -9,10 +9,17 @@ module.exports = {
     },
 
     getEventByTitle: (req, res) => {
-        const findTitle = events.filter((findEvent) => {
-            return findEvent.title === +req.params.title
+        const findTitle = events.filter((findTitle) => {
+            return findTitle.title === req.params.title
         })
         res.status(200).send(findTitle[0])
+    },
+
+    getEventById: (req, res) => {
+        const findId = events.filter((findId) => {
+            return findId.id === +req.params.id
+        })
+        res.status(200).send(findId[0])
     },
 
     createEvent: (req, res) => {
@@ -26,11 +33,17 @@ module.exports = {
     },
 
     updateEvent: (req, res) => {
-        const 
+        let title = events.title
+        const updatedEvent = {
+            title: req.body.title,
+            id: id
+        }
+        events = [...events, updatedEvent]
+        res.status(200).send(events)
     },
 
-    deleteEvent: (req, res) => {
-        const {title} = req.params;
-        events = events.filter()
-    }
+    // deleteEvent: (req, res) => {
+    //     const { title, id } = req.params;
+    //     events = events.filter()
+    // }
 }

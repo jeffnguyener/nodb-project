@@ -5,8 +5,11 @@ const vc = require('./controllers/vaca_controller')
 app.use(express.json())
 
 app.get('/api/events', vc.getEvent)
-app.get('/api/events', vc.getEventByTitle)
+app.get('/api/event/:title', vc.getEventByTitle)
+app.get('/api/events/:id', vc.getEventById)
 app.post('/api/events', vc.createEvent)
+app.put('/api/events', vc.updateEvent)
+// app.delete()
 
 
 const PORT = 3555
