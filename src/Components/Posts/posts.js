@@ -27,7 +27,16 @@ class Posts extends Component {
     }
 
     handleUpdatedEvent = (id, title) => {
-        axios.put(`/api/event/${id}`, {title: title}).then(res => {
+        axios.put(`/api/event/${id}`, { title: title }).then(res => {
+            this.setState({
+                allCurrentEvents: res.data
+            })
+        })
+    }
+
+    handleDeletedEvent = (id, title) => {
+        axios.delete(`/api/events/${id}`)
+        .then(res => {
             this.setState({
                 allCurrentEvents: res.data
             })
@@ -36,7 +45,7 @@ class Posts extends Component {
 
     render() {
         // console.log(this.state.allCurrentEvents)
-        const currentEvents = this.state.allCurrentEvents.map((event) => <Post event={event} handleUpdatedEvent={this.handleUpdatedEvent}/>);
+        const currentEvents = this.state.allCurrentEvents.map((event) => <Post event={event} handleUpdatedEvent={this.handleUpdatedEvent} />);
 
         return (
             <div>

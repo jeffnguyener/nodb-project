@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 class Post extends Component {
-    constructor(){
+    constructor() {
         super()
         this.state = {
             input: ""
@@ -15,20 +15,24 @@ class Post extends Component {
     }
 
     savedInput = () => {
-        const {id} = this.props.event 
-        const {input} = this.state
-        this.props.handleUpdatedEvent(id,input);
+        const { id } = this.props.event
+        const { input } = this.state
+        this.props.handleUpdatedEvent(id, input);
     }
 
-    render(){
+    deleteInput = () => {
+        
+    }
+
+    render() {
         console.log(this.props)
-        return(
+        return (
             <div>
                 <li>{this.props.event.title}</li>
-                    <input
-                        onChange={this.handleInput}
-                        placeholder='Edit Post' />
-                    <button onClick={this.savedInput}>Save</button>
+                <input
+                    onChange={this.handleInput}
+                    placeholder='Edit Post' />
+                <button onClick={this.savedInput}>Save</button>
             </div>
         )
     }
