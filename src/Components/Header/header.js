@@ -1,18 +1,27 @@
 import React, { Component } from 'react';
+// import axios from 'axios';
 
-import '../Header.css'
+// import logo from './img/beach-vacation.png'
 
-class Header extends Component{
-    constructor(){
-        super()
-        this.state = {
+import './Header.css'
 
-        }
-    }
+class Header extends Component {
 
-    render(){
-        return(
+    render() {
 
+        return (
+            <section className="Header-p">
+                <section className="Header-content">
+
+                    <div className="Co-name">
+                    (logo)
+                    <span>NLFA</span>
+                    </div>
+
+                    <div className="Header-searchbar"></div>
+
+                </section>
+            </section>
         )
     }
 }

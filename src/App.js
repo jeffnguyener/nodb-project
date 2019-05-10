@@ -1,17 +1,17 @@
 import React from 'react';
-// import axios from 'axios';
 
 import './App.css';
 
-// import Header from './Components/Header/Header';
+import Header from './Components/Header/Header';
 // import Compose from './Components/Compose/Compose';
-// import Posts from './Components/Posts/Posts';
+import Posts from './Components/Posts/Posts';
 
 
 function App() {
   return (
     <div className="App">
-      Hello
+      <Header />
+      <Posts />
     </div>
   );
 }

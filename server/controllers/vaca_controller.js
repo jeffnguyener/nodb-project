@@ -15,7 +15,7 @@ module.exports = {
         const findTitle = events.filter((findTitle) => {
             return findTitle.title === req.params.title
         })
-        res.status(200).send(findTitle[0])
+        res.status(200).send(findTitle)
     },
 
     getEventById: (req, res) => {
