@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import Post from '../Post/Post'
 
 
 import './Posts.css'
@@ -9,8 +10,6 @@ class Posts extends Component {
         super(props)
         this.state = {
             allCurrentEvents: [],
-            editPost: ''
-
         }
     }
 
@@ -19,7 +18,7 @@ class Posts extends Component {
     }
 
     handleGetEvents = () => {
-        axios.get(`./api/events`).then(res => {
+        axios.get(`/api/events`).then(res => {
             console.log(res);
             this.setState({
                 allCurrentEvents: res.data
@@ -27,43 +26,21 @@ class Posts extends Component {
         })
     }
 
-    handleInput(val) {
-        this.setState({ editPost: val })
-    }
-
-    handleUpdatedEvent() {
-        let updateEvent = {
-            title: this.state.editPost
-        }
-        axios.put(`.api/events`).then(res => {
-            this.props.updateEvent(res.data)
-
+    handleUpdatedEvent = (id, title) => {
+        axios.put(`/api/event/${id}`, {title: title}).then(res => {
+            this.setState({
+                allCurrentEvents: res.data
+            })
         })
-    }
-
-    handleDeletedEvent = () => {
-        // axios.delete(`./api/event/${t}`, updateEvent).then(res => {
-            // this.props.deletedEvent(res.data)
-        // })
     }
 
     render() {
         // console.log(this.state.allCurrentEvents)
-        const currentEvents = this.state.allCurrentEvents.map((event) => {
-            return (
-                <div>
-                    <li key={event.title}>{event.title}</li>
-                    <input
-                        onChange={(e) => this.handleInput(e.target.value)}
-                        value={this.setState.editPost}
-                        placeholder='Edit Post' />
-                </div>
-
-            )
-        });
+        const currentEvents = this.state.allCurrentEvents.map((event) => <Post event={event} handleUpdatedEvent={this.handleUpdatedEvent}/>);
 
         return (
             <div>
+                <h1>Posts</h1>
                 {currentEvents}
             </div>
         )

@@ -39,13 +39,14 @@ module.exports = {
         const {id} = req.params
         const {title}= req.body
         let updatedEvent = {
-            title: title
-            
+            title: title,
+            id: id
         }
-        let myEvent = events.find(element => {
-            return element.id === +id
-        })
-        myEvent.title = updatedEvent.title
+        for(let i = 0; i < events.length; i++){
+            if(events[i].id === +id){
+                events[i]= updatedEvent
+            }
+        }
         res.status(200).send(events)
     },
 

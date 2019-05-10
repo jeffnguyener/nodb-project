@@ -4,16 +4,31 @@ class Post extends Component {
     constructor(){
         super()
         this.state = {
-
+            input: ""
         }
     }
+
+    handleInput = (event) => {
+        this.setState({
+            input: event.target.value
+        })
+    }
+
+    savedInput = () => {
+        const {id} = this.props.event 
+        const {input} = this.state
+        this.props.handleUpdatedEvent(id,input);
+    }
+
     render(){
+        console.log(this.props)
         return(
             <div>
-                <li>Hello</li>
+                <li>{this.props.event.title}</li>
                     <input
-
+                        onChange={this.handleInput}
                         placeholder='Edit Post' />
+                    <button onClick={this.savedInput}>Save</button>
             </div>
         )
     }
