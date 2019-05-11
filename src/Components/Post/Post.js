@@ -33,8 +33,8 @@ class Post extends Component {
                 <li>{this.props.event.title}</li>
                 <input
                     onChange={this.handleInput}
-                    placeholder='Edit Post' />
-                <button onClick={this.savedInput}>Edit</button>
+                    placeholder='Edit Event Title' />
+                <button onClick={this.savedInput}>Update</button>
                 <button onClick={this.deleteInput}>Delete</button>
             </div>
         )

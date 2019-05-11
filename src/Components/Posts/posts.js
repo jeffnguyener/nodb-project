@@ -6,8 +6,8 @@ import Post from '../Post/Post'
 import './Posts.css'
 
 class Posts extends Component {
-    constructor(props) {
-        super(props)
+    constructor() {
+        super()
         this.state = {
             allCurrentEvents: [],
         }
@@ -35,7 +35,7 @@ class Posts extends Component {
     }
 
     handleDeletedEvent = (id, title) => {
-        axios.delete(`/api/events/${id}`, {title})
+        axios.delete(`/api/events/${id}`, {title: title})
         .then(res => {
             this.setState({
                 allCurrentEvents: res.data
@@ -45,12 +45,11 @@ class Posts extends Component {
 
     render() {
         // console.log(this.state.allCurrentEvents)
-        const currentEvents = this.state.allCurrentEvents.map((event) => <Post event={event} handleUpdatedEvent={this.handleUpdatedEvent} />);
-        
-
+        const currentEvents = this.state.allCurrentEvents.map((event, i) => <Post event={event} handleUpdatedEvent={this.handleUpdatedEvent } />)
+            
         return (
             <div>
-                <h1>Posts</h1>
+                <h1>Current Vacations</h1>
                 {currentEvents}
             </div>
         )

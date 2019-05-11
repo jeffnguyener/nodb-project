@@ -5,14 +5,13 @@ import React, { Component } from 'react';
 import './Compose.css';
 
 class Compose extends Component{
-    constructor(){
-        super()
-        this.state = {
-
-        }
-    }
-    render(){
     
+    render(){
+        return(
+            <div>
+            <button onClick={this.compose}>New Vacation</button>
+            </div>
+        );
     }
 }
 
