@@ -4,7 +4,7 @@ import './App.css';
 
 import Header from './Components/Header/Header';
 import Compose from './Components/Compose/Compose';
-import Posts from './Components/Posts/Posts';
+import Posts from './Components/Content/Content';
 
 
 function App() {

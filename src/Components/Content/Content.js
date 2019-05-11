@@ -3,9 +3,9 @@ import axios from 'axios';
 import Post from '../Post/Post'
 
 
-import './Posts.css'
+import './Content.css'
 
-class Posts extends Component {
+class Content extends Component {
     constructor() {
         super()
         this.state = {
@@ -55,4 +55,4 @@ class Posts extends Component {
         )
     }
 }
-export default Posts;
+export default Content;
