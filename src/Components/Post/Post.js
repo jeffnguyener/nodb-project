@@ -21,18 +21,21 @@ class Post extends Component {
     }
 
     deleteInput = () => {
-        
+        const { id } = this.props.event
+        const { input } = this.state
+        this.props.handleDeletedEvent(id, input);
     }
 
     render() {
-        console.log(this.props)
+        // console.log(this.deleteInput)
         return (
             <div>
                 <li>{this.props.event.title}</li>
                 <input
                     onChange={this.handleInput}
                     placeholder='Edit Post' />
-                <button onClick={this.savedInput}>Save</button>
+                <button onClick={this.savedInput}>Edit</button>
+                <button onClick={this.deleteInput}>Delete</button>
             </div>
         )
     }
