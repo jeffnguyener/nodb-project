@@ -62,7 +62,9 @@ class Content extends Component {
             <div>
                 <Compose handleNewEvent={this.handleNewEvent} />
                 <h1>Current Vacations</h1>
+                <body>
                 {currentEvents}
+                </body>
             </div>
         )
     }

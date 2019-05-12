@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 // import axios from 'axios';
 
-// import logo from './img/beach-vacation.png'
+import logo from './images/family-vacation.png'
 
 import './Header.css'
 
@@ -14,11 +14,9 @@ class Header extends Component {
                 <section className="Header-content">
 
                     <div className="Co-name">
-                    (logo)
+                    {logo}
                     <span>NLFA</span>
                     </div>
-
-                    <div className="Header-searchbar"></div>
 
                 </section>
             </header>
