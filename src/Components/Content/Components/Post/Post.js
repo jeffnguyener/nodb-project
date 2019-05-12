@@ -18,6 +18,9 @@ class Post extends Component {
         const { id } = this.props.event
         const { input } = this.state
         this.props.handleUpdatedEvent(id, input);
+        this.setState({
+            input: ""
+        })
     }
 
     deleteInput = () => {
@@ -33,7 +36,8 @@ class Post extends Component {
                 <li>{this.props.event.title}</li>
                 <input
                     onChange={this.handleInput}
-                    placeholder='Edit Event Title' />
+                    placeholder='Edit Event Title' 
+                    value={this.state.input} />
                 <button onClick={this.savedInput}>Update</button>
                 <button onClick={this.deleteInput}>Delete</button>
             </div>

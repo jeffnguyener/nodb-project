@@ -10,7 +10,7 @@ class Header extends Component {
     render() {
 
         return (
-            <section className="Header-p">
+            <header className="Header-p">
                 <section className="Header-content">
 
                     <div className="Co-name">
@@ -21,7 +21,7 @@ class Header extends Component {
                     <div className="Header-searchbar"></div>
 
                 </section>
-            </section>
+            </header>
         )
     }
 }

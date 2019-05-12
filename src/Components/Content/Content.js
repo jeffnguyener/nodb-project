@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import Post from '../Post/Post'
+import Post from './Components/Post/Post'
+import Compose from './Components/Compose/Compose'
 
 
 import './Content.css'
@@ -19,7 +20,15 @@ class Content extends Component {
 
     handleGetEvents = () => {
         axios.get(`/api/events`).then(res => {
-            console.log(res);
+            // console.log(res);
+            this.setState({
+                allCurrentEvents: res.data
+            })
+        })
+    }
+
+    handleNewEvent = (title) => {
+        axios.post(`/api/events`, {title: title}).then(res => {
             this.setState({
                 allCurrentEvents: res.data
             })
@@ -32,23 +41,26 @@ class Content extends Component {
                 allCurrentEvents: res.data
             })
         })
+        .catch(err => alert(err));
     }
 
     handleDeletedEvent = (id, title) => {
-        axios.delete(`/api/events/${id}`, {title: title})
-        .then(res => {
-            this.setState({
-                allCurrentEvents: res.data
+        axios.delete(`/api/events/${id}`, { title: title })
+            .then(res => {
+                this.setState({
+                    allCurrentEvents: res.data
+                })
             })
-        })
+            .catch(err => alert(err));
     }
 
     render() {
         // console.log(this.state.allCurrentEvents)
-        const currentEvents = this.state.allCurrentEvents.map((event, i) => <Post event={event} handleUpdatedEvent={this.handleUpdatedEvent } />)
-            
+        const currentEvents = this.state.allCurrentEvents.map((event) => <Post event={event} handleUpdatedEvent={this.handleUpdatedEvent} handleDeletedEvent={this.handleDeletedEvent} />)
+
         return (
             <div>
+                <Compose handleNewEvent={this.handleNewEvent} />
                 <h1>Current Vacations</h1>
                 {currentEvents}
             </div>

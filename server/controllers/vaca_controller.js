@@ -11,12 +11,12 @@ module.exports = {
         res.status(200).send(events)
     },
 
-    getEventByTitle: (req, res) => {
-        const findTitle = events.filter((findTitle) => {
-            return findTitle.title === req.params.title
-        })
-        res.status(200).send(findTitle)
-    },
+    // getEventByTitle: (req, res) => {
+    //     const findTitle = events.filter((findTitle) => {
+    //         return findTitle.title === req.params.title
+    //     })
+    //     res.status(200).send(findTitle)
+    // },
 
     getEventById: (req, res) => {
         const findId = events.filter((findId) => {
