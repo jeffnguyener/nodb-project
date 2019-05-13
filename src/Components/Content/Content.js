@@ -28,7 +28,7 @@ class Content extends Component {
     }
 
     handleNewEvent = (title) => {
-        axios.post(`/api/events`, {title: title}).then(res => {
+        axios.post(`/api/events`, { title: title }).then(res => {
             this.setState({
                 allCurrentEvents: res.data
             })
@@ -41,7 +41,7 @@ class Content extends Component {
                 allCurrentEvents: res.data
             })
         })
-        .catch(err => alert(err));
+            .catch(err => alert(err));
     }
 
     handleDeletedEvent = (id, title) => {
@@ -59,12 +59,14 @@ class Content extends Component {
         const currentEvents = this.state.allCurrentEvents.map((event) => <Post event={event} handleUpdatedEvent={this.handleUpdatedEvent} handleDeletedEvent={this.handleDeletedEvent} />)
 
         return (
-            <div>
+            <div className="content">
                 <Compose handleNewEvent={this.handleNewEvent} />
                 <h1>Current Vacations</h1>
-                <body>
-                {currentEvents}
-                </body>
+                <div className="contentbody">
+                        <div className="eventbox">
+                        {currentEvents}
+                        </div>
+                    </div>
             </div>
         )
     }

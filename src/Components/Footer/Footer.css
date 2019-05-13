@@ -1,8 +1,5 @@
 Footer {
     width: 100%;
-    height: 5em;
-    background: aquamarine;
-    display: block;
-    flex-direction: row;
-    align-items: flex-end;
+    height: 15vh;
+    background: white;
 }
