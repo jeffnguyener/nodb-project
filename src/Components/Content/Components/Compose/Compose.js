@@ -33,7 +33,7 @@ class Compose extends Component{
                 onChange={this.handleNewInput}
                 placeholder='New Event'
                 value={this.state.input} />
-            <button onClick={this.handleSavedNewInput}>New Vacation</button>
+            <button onClick={this.handleSavedNewInput}>New Task</button>
             </div>
         );
     }
