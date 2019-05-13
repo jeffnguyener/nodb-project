@@ -26,7 +26,7 @@ class Compose extends Component {
             <div>
                 <input
                     onChange={this.handleNewInput}
-                    placeholder='New Task'
+                    placeholder='Enter New Task'
                     value={this.state.input} />
                 <button onClick={this.handleSavedNewInput}>New Task</button>
             </div>
