@@ -1,6 +1,7 @@
 let events = [
-    { title: 'Hawaii', id: 1 },
-    { title: 'Alaska', id: 2 }
+    { title: 'Secure luggage', id: 1 },
+    { title: 'Check tire pressure', id: 2 },
+    { title: 'Make sure pets are inside the car'}
 ]
 
 let id = 1;

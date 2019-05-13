@@ -11,10 +11,13 @@
     min-height: 84vh; 
     height: auto;
     background:rgb(153, 71, 0);
+
 }
 .contentbody {
     display: flex;    
     flex-direction: column;
+    justify-content: flex-start;
+
 }
 
 h1 {
