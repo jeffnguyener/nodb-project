@@ -1,5 +1,5 @@
 let events = [
-    { title: 'Secure luggage', id: 1},
+    { title: 'Secure luggage on roof rack', id: 1},
     { title: 'Check tire pressure', id: 2 },
     { title: 'Make sure pets are inside the car', id: 3}
 ]

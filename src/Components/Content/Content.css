@@ -13,10 +13,13 @@
     background:rgb(153, 71, 0);
 
 }
-.contentbody {
+.content-body {
     display: flex;    
     flex-direction: column;
     justify-content: flex-start;
+    border: 1em;
+    border-style: solid;
+    border-color: white;
 
 }
 

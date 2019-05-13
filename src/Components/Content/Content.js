@@ -60,9 +60,10 @@ class Content extends Component {
 
         return (
             <div className="content">
+                <br></br>
                 <Compose handleNewEvent={this.handleNewEvent} />
                 <h1>Current List</h1>
-                <div className="contentbody">
+                <div className="content-body">
                     <div className="eventbox">
                         {currentEvents}
                     </div>

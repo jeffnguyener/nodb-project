@@ -1,8 +1,7 @@
 .Header-p {
-    width: 100%;
-    height: 15Vh;
-    background: white;
-    display: flex;
+  width: 100%;
+  height: 15Vh;
+  background: white;
 }
 
 .Header-content {
@@ -14,7 +13,9 @@
   align-items: center;
   box-sizing: border-box;
   padding: 0px 20px;
-}   
+}
+
+
 
 .family {
   display: flex;
@@ -28,6 +29,6 @@ h1 {
   color: white;
 }
 
-.eventbox  {
+.eventbox {
   color: rgb(153, 71, 0);
 }

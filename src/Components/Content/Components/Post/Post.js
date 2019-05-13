@@ -36,7 +36,7 @@ class Post extends Component {
                 <li>{this.props.event.title}</li>
                 <input
                     onChange={this.handleInput}
-                    placeholder='Edit Event Title' 
+                    placeholder='Edit Task Title' 
                     value={this.state.input} />
                 <button onClick={this.savedInput}>Update</button>
                 <button onClick={this.deleteInput}>Delete</button>
