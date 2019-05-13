@@ -1,8 +1,5 @@
 import React, { Component } from 'react';
 
-import './Compose.css';
-
-
 class Compose extends Component {
     constructor() {
         super()
@@ -24,11 +21,11 @@ class Compose extends Component {
         })
     }
 
+                    //Where inserted compose new task button
 
     render() {
         return (
             <div>
-
                 <input
                     onChange={this.handleNewInput}
                     placeholder='New Event'

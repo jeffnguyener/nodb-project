@@ -38,7 +38,8 @@ class Post extends Component {
 
     render() {
         return (
-            <div>
+            //onclick toggles between checked boxes and grays out buttons
+            <div> 
                 <li><input type="checkbox" onClick={this.toggleEdit}></input>{this.props.event.title}</li>
                 <input
                     onChange={this.handleInput}
