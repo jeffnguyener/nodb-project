@@ -49,4 +49,4 @@ module.exports = {
         events = events.filter((events) => events.id !== +id)
         res.status(200).send(events)
     }
-}
+};

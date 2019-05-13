@@ -21,14 +21,12 @@ class Compose extends Component {
         })
     }
 
-                    //Where inserted compose new task button
-
     render() {
         return (
             <div>
                 <input
                     onChange={this.handleNewInput}
-                    placeholder='New Event'
+                    placeholder='New Task'
                     value={this.state.input} />
                 <button onClick={this.handleSavedNewInput}>New Task</button>
             </div>
