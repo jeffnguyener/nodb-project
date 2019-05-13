@@ -20,7 +20,7 @@
   align-items: flex-end;
   color: rgb(153, 71, 0);
   font-size: 40px;
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-family: Impact, 'Arial Narrow Bold', sans-serif;
   text-transform: uppercase;
 }
 
@@ -28,6 +28,6 @@ h1 {
   color: white;
 }
 
-.eventbox {
+.event-box {
   color: rgb(153, 71, 0);
 }
