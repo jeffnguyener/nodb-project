@@ -37,6 +37,7 @@ class Content extends Component {
 
     handleUpdatedEvent = (id, title) => {
         axios.put(`/api/event/${id}`, { title: title }).then(res => {
+            console.log(res.data)
             this.setState({
                 allCurrentEvents: res.data
             })
@@ -47,6 +48,7 @@ class Content extends Component {
     handleDeletedEvent = (id, title) => {
         axios.delete(`/api/events/${id}`, { title: title })
             .then(res => {
+                console.log(res.data)
                 this.setState({
                     allCurrentEvents: res.data
                 })

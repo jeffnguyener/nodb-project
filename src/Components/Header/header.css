@@ -16,9 +16,9 @@
 }
 
 
-
 .family {
   display: flex;
+  align-items: flex-end;
   color: rgb(153, 71, 0);
   font-size: 40px;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;

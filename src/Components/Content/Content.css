@@ -30,3 +30,7 @@ h1 {
 li {
     list-style: none;
 }
+
+input:disabled::placeholder{
+    text-decoration: line-through;
+}

@@ -1,6 +1,6 @@
 let events = [
     { title: 'Secure luggage on roof rack', id: 1},
-    { title: 'Check tire pressure', id: 2 },
+    { title: 'Make sure lug nuts are tight', id: 2 },
     { title: 'Make sure pets are inside the car', id: 3}
 ]
 
@@ -41,7 +41,7 @@ module.exports = {
         const {title}= req.body
         let updatedEvent = {
             title: title,
-            id: id
+            id: +id
         }
         for(let i = 0; i < events.length; i++){
             if(events[i].id === +id){

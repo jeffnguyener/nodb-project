@@ -4,7 +4,8 @@ class Post extends Component {
     constructor() {
         super()
         this.state = {
-            input: ""
+            input: "",
+            edit: false
         }
     }
 
@@ -29,17 +30,26 @@ class Post extends Component {
         this.props.handleDeletedEvent(id, input);
     }
 
+    toggleEdit = () => {
+        this.setState({
+            edit: !this.state.edit
+        })
+    }
+
     render() {
         // console.log(this.deleteInput)
+    
         return (
             <div>
-                <li>{this.props.event.title}</li>
+                <li><input type="checkbox" onClick={this.toggleEdit}></input>{this.props.event.title}</li>
                 <input
                     onChange={this.handleInput}
                     placeholder='Edit Task Title' 
-                    value={this.state.input} />
-                <button onClick={this.savedInput}>Update</button>
-                <button onClick={this.deleteInput}>Delete</button>
+                    value={this.state.input} 
+                    disabled={this.state.edit}
+                    />
+                <button onClick={this.savedInput} disabled={this.state.edit}>Update</button>
+                <button onClick={this.deleteInput} disabled={this.state.edit}>Delete</button>
             </div>
         )
     }
