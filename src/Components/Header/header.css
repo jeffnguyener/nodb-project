@@ -21,6 +21,7 @@
   color: rgb(153, 71, 0);
   font-size: 40px;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  text-transform: uppercase;
 }
 
 h1 {
@@ -28,5 +29,5 @@ h1 {
 }
 
 .eventbox  {
-  color: white
+  color: rgb(153, 71, 0);
 }
