@@ -37,17 +37,15 @@ class Post extends Component {
     }
 
     render() {
-        // console.log(this.deleteInput)
-    
         return (
             <div>
                 <li><input type="checkbox" onClick={this.toggleEdit}></input>{this.props.event.title}</li>
                 <input
                     onChange={this.handleInput}
-                    placeholder='Edit Task Title' 
-                    value={this.state.input} 
+                    placeholder='Edit Task Title'
+                    value={this.state.input}
                     disabled={this.state.edit}
-                    />
+                />
                 <button onClick={this.savedInput} disabled={this.state.edit}>Update</button>
                 <button onClick={this.deleteInput} disabled={this.state.edit}>Delete</button>
             </div>

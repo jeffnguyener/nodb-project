@@ -3,8 +3,8 @@ import React, { Component } from 'react';
 import './Compose.css';
 
 
-class Compose extends Component{
-    constructor(){
+class Compose extends Component {
+    constructor() {
         super()
         this.state = {
             input: ""
@@ -23,17 +23,17 @@ class Compose extends Component{
             input: ""
         })
     }
-  
 
-    render(){
-        return(
+
+    render() {
+        return (
             <div>
-                
-            <input 
-                onChange={this.handleNewInput}
-                placeholder='New Event'
-                value={this.state.input} />
-            <button onClick={this.handleSavedNewInput}>New Task</button>
+
+                <input
+                    onChange={this.handleNewInput}
+                    placeholder='New Event'
+                    value={this.state.input} />
+                <button onClick={this.handleSavedNewInput}>New Task</button>
             </div>
         );
     }

@@ -1,26 +1,25 @@
-.eventbox > div {
+.eventbox>div {
     background: rgb(179, 148, 139);
 }
 
-.eventbox > div:nth-child(odd){
+.eventbox>div:nth-child(odd) {
     background: #e6b799;
 }
 
 .content {
     width: 100%;
-    min-height: 84vh; 
+    min-height: 84vh;
     height: auto;
-    background:rgb(153, 71, 0);
-
+    background: rgb(153, 71, 0);
 }
+
 .content-body {
-    display: flex;    
+    display: flex;
     flex-direction: column;
     justify-content: flex-start;
     border: 1em;
     border-style: solid;
     border-color: white;
-
 }
 
 h1 {
@@ -31,6 +30,6 @@ li {
     list-style: none;
 }
 
-input:disabled::placeholder{
+input:disabled::placeholder {
     text-decoration: line-through;
 }
