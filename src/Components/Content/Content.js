@@ -57,7 +57,6 @@ class Content extends Component {
     }
 
     render() {
-        // console.log(this.state.allCurrentEvents)
         const currentEvents = this.state.allCurrentEvents.map((event) => <Post event={event} handleUpdatedEvent={this.handleUpdatedEvent} handleDeletedEvent={this.handleDeletedEvent} />)
 
         return (
@@ -66,7 +65,7 @@ class Content extends Component {
                 <Compose handleNewEvent={this.handleNewEvent} />
                 <h1>Current List</h1>
                 <div className="content-body">
-                    <div className="eventbox">
+                    <div className="event-box">
                         {currentEvents}
                     </div>
                 </div>

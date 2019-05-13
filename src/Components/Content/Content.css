@@ -1,8 +1,8 @@
-.eventbox>div {
+.event-box>div {
     background: rgb(179, 148, 139);
 }
 
-.eventbox>div:nth-child(odd) {
+.event-box>div:nth-child(odd) {
     background: #e6b799;
 }
 
