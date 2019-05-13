@@ -1,7 +1,7 @@
 let events = [
-    { title: 'Secure luggage on roof rack', id: 1},
+    { title: 'Secure luggage on roof rack', id: 1 },
     { title: 'Make sure lug nuts are tight', id: 2 },
-    { title: 'Make sure pets are inside the car', id: 3}
+    { title: 'Make sure pets are inside the car', id: 3 }
 ]
 
 let id = 1;
@@ -30,15 +30,15 @@ module.exports = {
     },
 
     updateEvent: (req, res) => {
-        const {id} = req.params
-        const {title}= req.body
+        const { id } = req.params
+        const { title } = req.body
         let updatedEvent = {
             title: title,
             id: +id
         }
-        for(let i = 0; i < events.length; i++){
-            if(events[i].id === +id){
-                events[i]= updatedEvent
+        for (let i = 0; i < events.length; i++) {
+            if (events[i].id === +id) {
+                events[i] = updatedEvent
             }
         }
         res.status(200).send(events)
