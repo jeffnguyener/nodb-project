@@ -3,3 +3,12 @@ Footer {
     height: 15vh;
     background: white;
 }
+
+.registered {
+    padding: 50px;
+    display: flex;
+    justify-content: flex-end;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: rgb(153, 71, 0);
+
+}

@@ -8,6 +8,7 @@ class Footer extends Component{
         return (
             <footer className="Footer">
             <div>
+                <section className="registered">® 1983</section>
             </div>
             </footer>
         )

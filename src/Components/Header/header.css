@@ -2,6 +2,7 @@
     width: 100%;
     height: 15Vh;
     background: white;
+    display: flex;
 }
 
 .Header-content {
@@ -9,8 +10,23 @@
   height: 100%;
   margin: 0 auto;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   box-sizing: border-box;
   padding: 0px 20px;
-} 
+}   
+
+.family {
+  display: flex;
+  color: rgb(153, 71, 0);
+  font-size: 40px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+h1 {
+  color: white;
+}
+
+.eventbox  {
+  color: white
+}
